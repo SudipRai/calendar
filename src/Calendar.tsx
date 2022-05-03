@@ -11,6 +11,60 @@ import { endOfWeek, startOfWeek } from 'date-fns/esm';
 import CalendarDayRow from './CalendarDayRow';
 import './Calendar.css';
 
+
+// // const {
+// //   Client
+// // } = require("@microsoft/microsoft-graph-client");
+// // const {
+// //   TokenCredentialAuthenticationProvider
+// // } = require("@microsoft/microsoft-graph-client/authProviders/azureTokenCredentials");
+// // const {
+// //   ClientSecretCredential
+// // } = require("@azure/identity");
+
+// // const credential = new ClientSecretCredential("f8cdef31-a31e-4b4a-93e4-5f571e91255a", "0061d205-dab4-4dfa-9327-27195d14ae84", "9Wg8Q~W6RngGzvbLr~TpR0tLYOlstq~YNmbspaHK");
+// // const authProvider = new TokenCredentialAuthenticationProvider(credential, {
+// //   scopes: ["user.read", "mail.send"]
+// // });
+// // console.log(authProvider);
+// // const client = Client.initWithMiddleware({
+// //   debugLogging: true,
+// //   authProvider
+// //   // Use the authProvider object to create the class.
+// // });
+
+// // let events = client.api('/me/events')
+// // 	.header('Prefer','outlook.timezone="Pacific Standard Time"')
+// // 	.select('subject,body,bodyPreview,organizer,attendees,start,end,location')
+// // 	.get();
+
+// // console.log(events)
+
+
+
+
+// const {
+//   PublicClientApplication,
+//   InteractionType,
+//   AccountInfo
+// } = require("@azure/msal-browser");
+
+// const {
+//   AuthCodeMSALBrowserAuthenticationProvider,
+//   AuthCodeMSALBrowserAuthenticationProviderOptions
+// } = require("@microsoft/microsoft-graph-client/authProviders/authCodeMsalBrowser");
+
+// const options: AuthCodeMSALBrowserAuthenticationProviderOptions: {
+//   account: account, // the AccountInfo instance to acquire the token for.
+//   interactionType: InteractionType.PopUp, // msal-browser InteractionType
+//   scopes: ["user.read", "mail.send"] // example of the scopes to be passed
+// }
+
+// // Pass the PublicClientApplication instance from step 2 to create AuthCodeMSALBrowserAuthenticationProvider instance
+// const authProvider: new AuthCodeMSALBrowserAuthenticationProvider(publicClientApplication, options);
+
+
+
 export default function Calendar() {
   const app = useAppContext();
 
